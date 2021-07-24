@@ -3,8 +3,8 @@
 #PBS -P MST109178
 #PBS -W group_list=MST109178
 #PBS -N chr1_sub
-#PBS -o /work1/viviane1695/tbb1496/updated_annotation/run.log/chr1_out
-#PBS -e /work1/viviane1695/tbb1496/updated_annotation/run.log/chr1_err
+#PBS -o /work1/viviane1695/tbb1496/updates/run.log/chr1_out
+#PBS -e /work1/viviane1695/tbb1496/updates/run.log/chr1_err
 #PBS -M vivianchen1695@gmail.com
 #PBS -m a
 
@@ -20,4 +20,4 @@ NR==1 {
    for (i=1; i<=nc; i++)
       if (a[i] in hdr)
          printf "%s%s", $hdr[a[i]], (i<nc?OFS:ORS)
-}' > /work1/viviane1695/tbb1496/updated_annotation/tbb_subset_chr1_20210618.txt
+}' > /work1/viviane1695/tbb1496/updates/tbb_subset_chr1_20210618.txt

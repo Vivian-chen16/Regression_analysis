@@ -8,13 +8,17 @@ import matplotlib.pyplot as plt
 from scipy import stats
 from matplotlib.lines import Line2D
 
-df = pd.read_csv(r'/work1/viviane1695/tbb1496/updated_annotation/dataframe/tbb_updated_af_vqsr_cleaned.txt',sep='\t')
+df = pd.read_csv(r'/work1/viviane1695/tbb1496/updates/dataframe/tbb_updated_af_vqsr_cleaned.txt',sep='\t')
 
 df['tbbaf_all'] = df['tbbaf_all'].apply(pd.to_numeric, errors='coerce')
 df['tbbaf_all'].fillna(0, inplace=True)
 
 value = df['Filter'].value_counts(normalize=True) * 100
-print(np.round(value,2))
+#print(np.round(value,2))
+
+with open('/work1/viviane1695/tbb1496/updates/EAS_twb1496_official_filter.txt', 'w') as f:
+    for item in [np.round(value,2)]:
+        f.write("%s\n" % item)
 
 df['Filter'] = df['Filter'].map({'PASS': 'PASS(70.68%)', 
                                  'VQSRTrancheSNP99.80to99.90': 'SNV99.80-99.90(12.25%)',
@@ -65,5 +69,5 @@ axis[1].legend(title='VQSR Filter \n N=18,264', handles=handles, bbox_to_anchor=
 
 
 #plt.show()
-figure.savefig('/work1/viviane1695/tbb1496/updated_annotation/figure/eas_twb1496_official_fillna_r2.png', bbox_inches="tight", dpi=600)
+figure.savefig('/work1/viviane1695/tbb1496/updates/figure/eas_twb1496_official_fillna_r2.png', bbox_inches="tight", dpi=600)
 

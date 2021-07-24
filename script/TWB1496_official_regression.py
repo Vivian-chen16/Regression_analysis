@@ -7,7 +7,7 @@ from scipy import stats
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-df = pd.read_csv(r'/work1/viviane1695/tbb1496/updated_annotation/dataframe/tbb_updated_af_vqsr_cleaned.txt',sep='\t')
+df = pd.read_csv(r'/work1/viviane1695/tbb1496/updates/dataframe/tbb_updated_af_vqsr_cleaned.txt',sep='\t')
 
 ############################################################################### Filter distribution #####################################################################################################
 df['tbbaf_all'] = df['tbbaf_all'].apply(pd.to_numeric, errors='coerce')
@@ -16,7 +16,7 @@ df['tbbaf_all'].fillna(0, inplace=True)
 value = df['Filter'].value_counts(normalize=True) * 100
 #print(np.round(value,2))
 
-with open('1496_official_filter_percent.txt', 'w') as f:
+with open('/work1/viviane1695/tbb1496/updates/1496_official_filter_percent.txt', 'w') as f:
     for item in [np.round(value,2)]:
         f.write("%s\n" % item)
 
@@ -40,7 +40,7 @@ plt.grid(True)
 plt.legend(title='VQSR Filter \n N=18,264', bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0) #place legend outside top right corner of plot
 
 #plt.show()
-fig.savefig('/work1/viviane1695/tbb1496/updated_annotation/figure/twb1496_official_filter.png', bbox_inches="tight", dpi=600)
+fig.savefig('/work1/viviane1695/tbb1496/updates/figure/twb1496_official_filter.png', bbox_inches="tight", dpi=600)
 
 ############################################################################### population difference ###################################################################################################
 df['Difference'] = np.where(df['TWB1496'] == df['tbbaf_all'], 0, df['TWB1496'] - df['tbbaf_all'])
@@ -57,7 +57,11 @@ values = ['Sig_PASS','Sig_other', 'None'] # create a list to assign for each con
 df['Difference_Flag'] = np.select(conditions, values)
 
 percent = df['Difference_Flag'].value_counts(normalize=True) * 100
-print(np.round(percent,2))
+#print(np.round(percent,2))
+
+with open('/work1/viviane1695/tbb1496/updates/1496_official_DF_percent.txt', 'w') as f:
+    for item in [np.round(percent,2)]:
+        f.write("%s\n" % item)
 
 df['Difference_Flag'] = df['Difference_Flag'].map({'None': 'Others(94.96%)', 
                                                    'Sig_other': 'Non-PASS(4.01%)',
@@ -86,7 +90,7 @@ plt.grid(True)
 plt.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0) #place legend outside top right corner of plot
 
 #plt.show()
-fig_1.savefig('/work1/viviane1695/tbb1496/updated_annotation/figure/twb1496_official_DF_r2.png', bbox_inches="tight", dpi=600)
+fig_1.savefig('/work1/viviane1695/tbb1496/updates/figure/twb1496_official_DF_r2.png', bbox_inches="tight", dpi=600)
 
 ########################################################################### population difference of 'PASS' #############################################################################################
 
@@ -105,8 +109,12 @@ conditions = [
 
 values = ['Sig', '0'] # assign for each condition
 df1['Difference_Flag'] = np.select(conditions, values)
-percent = df1['Difference_Flag'].value_counts(normalize=True) * 100
-print(np.round(percent,2))
+percent1 = df1['Difference_Flag'].value_counts(normalize=True) * 100
+#print(np.round(percent,2))
+
+with open('/work1/viviane1695/tbb1496/updates/1496_official_DF_PASS.txt', 'w') as f:
+    for item in [np.round(percent1,2)]:
+        f.write("%s\n" % item)
 
 df1['Difference_Flag'] = df1['Difference_Flag'].map({'0': 'Others(98.54%)', 'Sig': 'DF> 0.05 (1.46%)'})
 
@@ -133,7 +141,7 @@ plt.grid(True)
 plt.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0)#place legend outside top right corner of plot
 
 #plt.show()
-fig_3.savefig('/work1/viviane1695/tbb1496/updated_annotation/figure/twb1496_official_PASS_DF_r2.png', bbox_inches="tight", dpi=600)
+fig_3.savefig('/work1/viviane1695/tbb1496/updates/figure/twb1496_official_PASS_DF_r2.png', bbox_inches="tight", dpi=600)
 
 ########################################################################### population specific of 'PASS' #############################################################################################
 
@@ -145,8 +153,11 @@ values_eas = ['TWB1496', 'tbbaf_all']
 
 df1['Specific_Flag'] = np.select(conditions_eas, values_eas)
 specific = df1['Specific_Flag'].value_counts(normalize=True) * 100
-print(np.round(specific,2))
+#print(np.round(specific,2))
 
+with open('/work1/viviane1695/tbb1496/updates/1496_official_specific_percent.txt', 'w') as f:
+    for item in [np.round(specific,2)]:
+        f.write("%s\n" % item)
 #### Pic 4 ####
 select_color = df1.loc[df1['Specific_Flag'] != '0']
 
@@ -175,6 +186,6 @@ plt.grid(True)
 plt.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0) #place legend outside top right corner of plot
 
 #plt.show()
-fig_4.savefig('/work1/viviane1695/tbb1496/updated_annotation/figure/twb1496_official_PASS_specific_r2.png', bbox_inches="tight", dpi=600)
+fig_4.savefig('/work1/viviane1695/tbb1496/updates/figure/twb1496_official_PASS_specific_r2.png', bbox_inches="tight", dpi=600)
 
 

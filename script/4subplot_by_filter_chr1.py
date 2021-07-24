@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 from scipy import stats
 from matplotlib.lines import Line2D
 
-df = pd.read_csv(r'/work1/viviane1695/tbb1496/updated_annotation/dataframe/chr1_updated_af_vqsr_cleaned.txt', sep='\t')
+df = pd.read_csv(r'/work1/viviane1695/tbb1496/updates/dataframe/chr1_updated_af_vqsr_cleaned.txt', sep='\t')
 df['Filter_code'] = df['Filter'].str.split('to').str[1]
 df['Filter_code'].fillna('PASS',inplace=True)
 
@@ -22,7 +22,7 @@ df3 = pd.concat([df2, df999], ignore_index=True)
 value_1 = df['Filter_code'].value_counts(normalize=True) * 100
 #print(np.round(value_1,2))
 
-with open('from_4plot_chr1.txt', 'w') as f:
+with open('/work1/viviane1695/tbb1496/updates/from_4plot_chr1.txt', 'w') as f:
     for item in [np.round(value_1,2)]:
         f.write("%s\n" % item)
 
@@ -93,4 +93,4 @@ axis[1,1].grid(True)
 figure.text(0.5, 0.0, 'TWB1496 (chromosome 1)', ha='center', fontsize=12)
 figure.text(0.0, 0.5, 'East Asian(EAS, gnomAD)', va='center', rotation='vertical', fontsize=12)
 #plt.show()
-figure.savefig('figure/chr1_twb1496_gnomAD_fourplot_r2.png', bbox_inches="tight", dpi=600)
+figure.savefig('/work1/viviane1695/tbb1496/updates/figure/chr1_twb1496_gnomAD_fourplot_r2.png', bbox_inches="tight", dpi=600)

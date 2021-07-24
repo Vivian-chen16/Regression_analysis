@@ -7,14 +7,14 @@ from scipy import stats
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-df = pd.read_csv(r'/work1/viviane1695/tbb1496/updated_annotation/dataframe/tbb_updated_af_vqsr_cleaned.txt',sep='\t')
+df = pd.read_csv(r'/work1/viviane1695/tbb1496/updates/dataframe/tbb_updated_af_vqsr_cleaned.txt',sep='\t')
 
 ###################################################################################### Filter distribution #############################################################################################
 
 value = df['Filter'].value_counts(normalize=True) * 100
 #print(np.round(value,2))
 
-with open('1496_EAS_filter_percent.txt', 'w') as f:
+with open('/work1/viviane1695/tbb1496/updates/1496_EAS_filter_percent.txt', 'w') as f:
     for item in [np.round(value,2)]:
         f.write("%s\n" % item)
 
@@ -36,7 +36,7 @@ plt.grid(True)
 plt.legend(title='VQSR Filter \n N=18,264', bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0)
 
 #plt.show()
-fig_0.savefig('/work1/viviane1695/tbb1496/updated_annotation/figure/twb1496_gnomAD_filter.png', bbox_inches="tight", dpi=600)
+fig_0.savefig('/work1/viviane1695/tbb1496/updates/figure/twb1496_gnomAD_filter.png', bbox_inches="tight", dpi=600)
 
 
 ###################################################################################### population difference ###########################################################################################
@@ -57,7 +57,7 @@ df['Difference_Flag'] = np.select(conditions, values)
 percent = df['Difference_Flag'].value_counts(normalize=True) * 100
 #print(np.round(percent,2))
 
-with open('1496_EAS_DF_percent.txt', 'w') as f:
+with open('/work1/viviane1695/tbb1496/updates/1496_EAS_DF_percent.txt', 'w') as f:
     for item in [np.round(percent,2)]:
         f.write("%s\n" % item)
 
@@ -88,7 +88,7 @@ plt.grid(True)
 plt.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0)
 
 #plt.show()
-fig_1.savefig('/work1/viviane1695/tbb1496/updated_annotation/figure/twb1496_gnomAD_DF_r2.png', bbox_inches="tight", dpi=600)
+fig_1.savefig('/work1/viviane1695/tbb1496/updates/figure/twb1496_gnomAD_DF_r2.png', bbox_inches="tight", dpi=600)
 
 ############################################################################### population difference for 'PASS' ########################################################################################
 # ALL difference are non-pass 
@@ -108,7 +108,11 @@ conditions = [
 values = ['Sig', '0']
 df1['Difference_Flag'] = np.select(conditions, values)
 percent1 = df1['Difference_Flag'].value_counts(normalize=True) * 100
-print(np.round(percent1,2))
+#print(np.round(percent1,2))
+
+with open('/work1/viviane1695/tbb1496/updates/1496_EAS_DF_PASS.txt', 'w') as f:
+    for item in [np.round(percent1,2)]:
+        f.write("%s\n" % item)
 
 df1['Difference_Flag'] = df1['Difference_Flag'].map({'0': 'Others(99.51%)', 'Sig': 'DF > 0.05 (0.49%)'})
 
@@ -136,7 +140,7 @@ plt.grid(True)
 plt.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0)
 
 #plt.show()
-fig_2.savefig('/work1/viviane1695/tbb1496/updated_annotation/figure/twb1496_gnomAD_PASS_DF_r2.png', bbox_inches="tight", dpi=600)
+fig_2.savefig('/work1/viviane1695/tbb1496/updates/figure/twb1496_gnomAD_PASS_DF_r2.png', bbox_inches="tight", dpi=600)
 
 ############################################################################### population specific for 'PASS' ########################################################################################
 
@@ -150,7 +154,11 @@ values_eas = ['TWB', 'AF_eas']
 
 df1['Specific_Flag'] = np.select(conditions_eas, values_eas)
 specific = df1['Specific_Flag'].value_counts(normalize=True) * 100
-print(np.round(specific,2))
+#print(np.round(specific,2))
+
+with open('/work1/viviane1695/tbb1496/updates/1496_EAS_specific.txt', 'w') as f:
+    for item in [np.round(specific,2)]:
+        f.write("%s\n" % item)
 
 #### Pic 3 ####
 select_color = df1.loc[df1['Specific_Flag'] != '0']
@@ -182,6 +190,6 @@ plt.grid(True)
 plt.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0)
 
 #plt.show()
-fig_3.savefig('/work1/viviane1695/tbb1496/updated_annotation/figure/twb1496_gnomAD_PASS_specific.png', bbox_inches="tight", dpi=600)
+fig_3.savefig('/work1/viviane1695/tbb1496/updates/figure/twb1496_gnomAD_PASS_specific.png', bbox_inches="tight", dpi=600)
 
 
