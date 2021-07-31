@@ -1,0 +1,42 @@
+Chr	Start	End	Ref	Alt	variant	gene	type	level of evidence	chemicals	phenotypes	Info	AF_Category
+chr1	97915621.0	97915622.0	TG	.	rs72549303	DPYD	Other	1A	fluorouracil	.	.	.
+chr1	98039499.0	98039499.0	C	.	rs78060119	DPYD	Toxicity	1A	fluorouracil	Neoplasms	.	.
+chr1	98039499.0	98039499.0	C	.	rs78060119	DPYD	Other	1A	fluorouracil	.	.	.
+chr1	98205966.0	98205970.0	GATGA	.	rs72549309	DPYD	Other	1A	fluorouracil	.	.	.
+chr1	98205967.0	98205970.0	ATGA	.	rs72549309	DPYD	Other	1A	fluorouracil	.	.	.
+chr7	117199644.0	117199647.0	ATCT	.	rs113993960	CFTR	Efficacy	1A	ivacaftor / lumacaftor	Cystic Fibrosis	.	.
+chr7	117199644.0	117199647.0	ATCT	.	rs113993960	CFTR	Efficacy	1A	ivacaftor / tezacaftor	Cystic Fibrosis	.	.
+chr7	117199645.0	117199647.0	TCT	.	rs113993960	CFTR	Efficacy	1A	ivacaftor / lumacaftor	Cystic Fibrosis	.	.
+chr7	117199645.0	117199647.0	TCT	.	rs113993960	CFTR	Efficacy	1A	ivacaftor / tezacaftor	Cystic Fibrosis	.	.
+chr7	117199646.0	117199647.0	CT	.	rs113993960	CFTR	Efficacy	1A	ivacaftor / lumacaftor	Cystic Fibrosis	.	.
+chr7	117199646.0	117199647.0	CT	.	rs113993960	CFTR	Efficacy	1A	ivacaftor / tezacaftor	Cystic Fibrosis	.	.
+chr17	61565890.0	61565890.0	-	.	rs1799752	ACE	Efficacy	2A	captopril	Diabetes Mellitus, Type 2,Heart Failure,Pulmonary Disease, Chronic Obstructive	.	.
+chr17	61565890.0	61565890.0	-	.	rs1799752	ACE	Efficacy	2A	captopril	Diabetes Mellitus, Type 2,Heart Failure,Pulmonary Disease, Chronic Obstructive	.	.
+chr17	61565890.0	61565890.0	T	.	rs1799752	ACE	Efficacy	2A	captopril	Diabetes Mellitus, Type 2,Heart Failure,Pulmonary Disease, Chronic Obstructive	.	.
+chr17	61565890.0	61565890.0	T	.	rs1799752	ACE	Efficacy	2A	captopril	Diabetes Mellitus, Type 2,Heart Failure,Pulmonary Disease, Chronic Obstructive	.	.
+chr19	38990284.0	38990287.0	TGGA	.	rs121918596	RYR1	Toxicity	1A	desflurane,enflurane,halothane,isoflurane,methoxyflurane,sevoflurane,succinylcholine	Malignant Hyperthermia	.	.
+chr19	38990285.0	38990287.0	GGA	.	rs121918596	RYR1	Toxicity	1A	desflurane,enflurane,halothane,isoflurane,methoxyflurane,sevoflurane,succinylcholine	Malignant Hyperthermia	.	.
+chr19	38990287.0	38990288.0	AG	.	rs121918596	RYR1	Toxicity	1A	desflurane,enflurane,halothane,isoflurane,methoxyflurane,sevoflurane,succinylcholine	Malignant Hyperthermia	.	.
+chr19	39739154.0	39739154.0	T	.	rs11322783	IFNL4	Efficacy	1B	peginterferon alfa-2a,peginterferon alfa-2b,ribavirin	Hepatitis C, Chronic	.	.
+chrMT	1555.0	1555.0	A	.	rs267606617	MT-RNR1	Toxicity	2A	streptomycin	Ototoxicity	.	.
+chrMT	1555.0	1555.0	A	.	rs267606617	MT-RNR1	Toxicity	2A	aminoglycoside antibacterials	Ototoxicity	.	.
+chrMT	1555.0	1555.0	A	.	rs267606617	MT-ND1,MT-RNR1	Toxicity	2A	gentamicin	Ototoxicity	.	.
+.	.	.	.	.	UGT1A1*1, UGT1A1*6, UGT1A1*28, UGT1A1*36, UGT1A1*37	UGT1A1	Toxicity	1A	atazanavir,atazanavir / ritonavir	HIV Infections,Hyperbilirubinemia	.	.
+.	.	.	.	.	TPMT*1, TPMT*2, TPMT*3A, TPMT*3B, TPMT*3C	TPMT	Dosage	1A	azathioprine	dose reduction	.	.
+.	.	.	.	.	TPMT*1, TPMT*2, TPMT*3A, TPMT*3B, TPMT*3C	TPMT	Toxicity	1A	azathioprine	Leukopenia,Myelosuppression	.	.
+.	.	.	.	.	G6PD A- 202A_376G, G6PD B (wildtype), G6PD Mediterranean, Dallas, Panama, Sassari, Cagliari, Birmingham	G6PD	Toxicity	1A	rasburicase	Hemolysis,Methemoglobinemia	.	.
+.	.	.	.	.	TPMT*1, TPMT*2, TPMT*3A, TPMT*3B, TPMT*3C	TPMT	Dosage	1A	mercaptopurine	dose reduction	.	.
+.	.	.	.	.	TPMT*1, TPMT*2, TPMT*3A, TPMT*3B, TPMT*3C, TPMT*4	TPMT	Toxicity	1A	mercaptopurine	.	.	.
+.	.	.	.	.	UGT1A1*1, UGT1A1*28	UGT1A1	Dosage	1A	irinotecan	.	.	.
+.	.	.	.	.	UGT1A1*1, UGT1A1*28	UGT1A1	Toxicity	1A	FOLFIRI,irinotecan	Neutropenia	.	.
+.	.	.	.	.	NUDT15*1, NUDT15*2, NUDT15*3	NUDT15	Toxicity	1A	mercaptopurine	Leukopenia,Neutropenia	.	.
+.	.	.	.	.	NUDT15*1, NUDT15*2, NUDT15*3	NUDT15	Dosage	1A	mercaptopurine	Precursor Cell Lymphoblastic Leukemia-Lymphoma	.	.
+.	.	.	.	.	UGT1A1*1, UGT1A1*6, UGT1A1*28	UGT1A1	Toxicity	1B	FOLFIRI,irinotecan	Diarrhea	.	.
+.	.	.	.	.	UGT1A1*1, UGT1A1*6	UGT1A1	Toxicity	1B	FOLFIRI,irinotecan	Neutropenia	.	.
+.	.	.	.	.	NAT2*4, NAT2*5, NAT2*5B, NAT2*5D, NAT2*6, NAT2*6A, NAT2*6B, NAT2*7, NAT2*7B, NAT2*14	NAT2	Toxicity	1B	ethambutol,isoniazid,pyrazinamide,rifampin	Hepatitis, Toxic,Toxic liver disease,Tuberculosis	.	.
+.	.	.	.	.	UGT1A1*1, UGT1A1*6, UGT1A1*28	UGT1A1	Metabolism/PK	2A	SN-38	.	.	.
+.	.	.	.	.	NAT2*4, NAT2*5, NAT2*5B, NAT2*6, NAT2*6A, NAT2*7, NAT2*7B	NAT2	Toxicity	2A	Drugs For Treatment Of Tuberculosis	drug-induced liver injury,Toxic liver disease,Tuberculosis	.	.
+.	.	.	.	.	NAT2*4, NAT2*5, NAT2*5B, NAT2*6, NAT2*6A, NAT2*6J, NAT2*6O, NAT2*7, NAT2*7B, NAT2*7G, NAT2*12A, NAT2*13A, NAT2*14	NAT2	Metabolism/PK	2A	isoniazid	Tuberculosis	.	.
+.	.	.	.	.	NAT2*4, NAT2*5A, NAT2*5B, NAT2*5C, NAT2*6A, NAT2*7B, NAT2*12A, NAT2*13A, NAT2*14B	NAT2	Toxicity	2A	isoniazid	drug-induced liver injury,Hepatitis, Toxic,Toxic liver disease,Tuberculosis	.	.
+.	.	.	.	.	NAT2*4, NAT2*5B, NAT2*6A, NAT2*7B, NAT2*12	NAT2	Toxicity	2A	isoniazid,rifampin	Toxic liver disease,Tuberculosis	.	.
+.	.	.	.	.	NAT2*4, NAT2*5, NAT2*5A, NAT2*6A, NAT2*7, NAT2*7A	NAT2	Toxicity	2A	isoniazid,pyrazinamide,rifampin	Toxic liver disease,Tuberculosis	.	.
