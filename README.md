@@ -31,8 +31,9 @@ $ pip install python
     (1) gene function is related to splicing
     (2) exonic variant function is nonsynonymous SNV or related to deletion, insertion, stoploss and stopgain.
 * Data clean, define population difference and specific in afterwards regression analysis
-  * Please check 
-
+  * Please check merge.sh
 * Regression analysis
   * Please check Regression.sh
 * PharGKB tbale
+* Chromosome 1 data gathering and regression analysis
+  * Please check chr1.sh for subset and check chr1_regression.sh for analysis.
