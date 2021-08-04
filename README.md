@@ -33,7 +33,7 @@ $ pip install python
 * Data clean, define population difference and specific in afterwards regression analysis
   * Please check merge.sh
 * Regression analysis
-  * Please check Regression.sh
+  * Please check regression.sh
 * PharGKB tbale
 * Chromosome 1 data gathering and regression analysis
-  * Please check chr1.sh for subset and check chr1_regression.sh for analysis.
+  * Please check chr1.sh for subset and check chr1_clean_regression.sh for analysis.
